@@ -240,6 +240,13 @@
     transform: translateY(-16px);
 }
 
+  .intro_block_possition {
+    display: flex;
+    position: absolute;
+    top: 250px;
+
+  }
+
   /*Skills style start*/
 
   .wrapp_skills {
