@@ -7,43 +7,51 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/img/p.ico">
 </head>
 <body>
     <header class="header">
-        <div class="wrapper">
-            <div class="header_wrapper"> <!-- LOGO -->
+        <section class="hero">
+            <div class="wrapper_hero">
                 <div class="header_logo">
-                    <a href="/" class="header_logo-link">
-                        <img src="assets/svg/logo.svg" alt="logo">
-                    </a>
+                    <div class="icon_box">
+                       
+                            <svg class="icon">
+                            <use xlink:href="./assets/svg/sprite.svg#github-logo"></use>
+                            </svg>
+                        
+                    </div>
+                   
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                            <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>      
+                            <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+                            <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                            <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <div class="nav-list2">
+                            <div class="nav-item2"><a href="#english" class="nav-link">en</a></div>
+                            <div class="nav-item2"><a class="nav-link2">/</a></div>
+                            <div class="nav-item2"><a href="#russian" class="nav-link">ru</a></div>
+                        </div>
+                    </div>
                 </div>
-            
-                
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                        <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                        <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>      
-                        <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
-                        <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
-                        <li class="nav-item"><a href="#languages" class="nav-link">en / ru</a></li>
-                    </ul>
-                </nav>
+                <div>                  
+                    <div class="intro_block">
+                        <h1 class="intro-title"> Alexa Rise </h1>
+                        <p class="intro-subtitle">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
+                        <button class="intro-button">Hire me</button>
+                    </div> 
+                </div>                                     
             </div>
-        </div>
+        </section>              
     </header>
 
     <main>
-        <section class="intro" id="hero">
-            <div class="wrapper">
-               <h1 class="intro-title"> Alexa Rise </h1>
-               <p class="intro-subtitle">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
-               <div class="button">
-                    <div class="intro-button">Hire me</div>
-               </div>
-            </div>
-        </section>
-
         <div class="container">
             <section class="section" id="skills">
                 <div class="wrapper">
@@ -80,42 +88,35 @@
                     <div class="wrapp-title">                                     
                         <h2 class="section-title">Portfolio</h2>       
                     </div>
-                    <div class="wrapp_portfolio1">
-                       <div class="button2">
-                            <a class="portfolio-button">Winter</a>
-                       </div>
-                       <div class="button2">
-                            <a class="portfolio-button">Spring</a>
-                       </div>
-                       <div class="button2">
-                            <a class="portfolio-button">Summer</a>
-                       </div>
-                       <div class="button1">
-                            <a class="portfolio-button2">Autumn</a>
-                        </div>
+
+                    <div class="wrapp_portfolio1">                       
+                        <button class="portfolio-button">Winter</button>
+                        <button class="portfolio-button">Spring</button>
+                        <button class="portfolio-button">Summer</button>
+                        <button class="portfolio-button2">Autumn</button>
                     </div>
                   
                     <div class="wrapp_portfolio2">
-                            <div>
-                                <img src="assets/img/portfolio-img6.jpg" alt="img">
-                            </div>
-                            <div>
-                                <img src="assets/img/portfolio-img5.jpg" alt="img">
-                            </div>
-                            <div>
-                                <img src="assets/img/portfolio-img4.jpg" alt="img">
-                            </div>
+                        <div>
+                            <img src="assets/img/portfolio-img6.jpg" alt="img">
+                        </div>
+                        <div>
+                            <img src="assets/img/portfolio-img5.jpg" alt="img">
+                        </div>
+                        <div>
+                            <img src="assets/img/portfolio-img4.jpg" alt="img">
+                        </div>
                     </div>
-                            <div class="wrapp_portfolio2">
-                            <div>
-                                <img src="assets/img/portfolio-img3.jpg" alt="img">
-                            </div>
-                            <div>
-                                <img src="assets/img/portfolio-img2.jpg" alt="img">
-                            </div>
-                            <div>
-                                <img src="assets/img/portfolio-img1.jpg" alt="img">
-                            </div>
+                    <div class="wrapp_portfolio2">
+                        <div>
+                            <img src="assets/img/portfolio-img3.jpg" alt="img">
+                        </div>
+                        <div>
+                            <img src="assets/img/portfolio-img2.jpg" alt="img">
+                        </div>
+                        <div>
+                            <img src="assets/img/portfolio-img1.jpg" alt="img">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -126,8 +127,13 @@
                         <h2 class="section-title">Video</h2>       
                     </div>
                     <div class="video_hover">
-                        <img class="possition_button" src="assets/svg/Play_hover.svg" alt="img">
-                    </div>
+
+                        <a href="/" class="video_hover">
+                            <svg class="icon_2">
+                              <use xlink:href="./assets/svg/sprite.svg#Play_hover"></use>
+                            </svg>
+                        </a>
+
                 </div>
             </section>
 
@@ -136,91 +142,102 @@
                     <div class="wrapp-title">                                     
                         <h2 class="section-title">Price</h2>       
                     </div>
-                    <div class="wrapp_price">
-
-                        <div class="wrapp_block">
-                            <div class="wrapp_item">
-                                <p class="price-subtitle1">Standard</p>
-                                <p class="price-subtitle2">500$ </p>
-                                <p class="price-subtitle3">One location <br> 120 photos in color <br> 12 photos in retouch <br> Readiness 2-3 weeks <br> Make up, visage</p>
+                        <div class="wrapp_price">
+                            <div class="wrapp_block">                            
+                                <div class="margin_for_button">
+                                    <span class="price-subtitle1">Standard</span>
+                                    <span class="price-subtitle2">500 $ </span>
+                                    <span class="price-subtitle3">One location 
+                                    <span class="price-subtitle3">120 photos in color</span> 
+                                    <span class="price-subtitle3">12 photos in retouch</span> 
+                                    <span class="price-subtitle3">Readiness 2-3 weeks</span> 
+                                    <span class="price-subtitle3">Make up, visage</span>
+                                </div>
+                                    <button class="pricebutton_style">Order shooting</button>                    
                             </div>
-                            <div class="price-button">
-                                <div class="pricebutton_style">Order shooting</div>
+                            <div class="wrapp_block">                            
+                                <div class="margin_for_button">
+                                    <span class="price-subtitle1">Premium</span>
+                                    <span class="price-subtitle2">700 $ </span>
+                                    <span class="price-subtitle3">One or two locations 
+                                    <span class="price-subtitle3">200 photos in color</span> 
+                                    <span class="price-subtitle3">20 photos in retouch</span> 
+                                    <span class="price-subtitle3">Readiness 1-2 weeks</span> 
+                                    <span class="price-subtitle3">Make up, visage</span>
+                                </div>
+                                    <button class="pricebutton_style">Order shooting</button>                    
                             </div>
-                         </div>
-
-                         <div class="wrapp_block">
-                            <div class="wrapp_item">
-                                <p class="price-subtitle1">Premium</p>
-                                <p class="price-subtitle2">700$ </p>
-                                <p class="price-subtitle3">Three locations or more <br> 300 photos in color <br> 50 photos in retouch <br> Readiness 1 week <br> Make up, visage, hairstyle</p>
-                            </div>
-                            <div class="price-button">
-                                <div class="pricebutton_style">Order shooting</div>
-                            </div>
-                         </div>
-                        
-                         <div class="wrapp_block">
-                            <div class="wrapp_item">
-                                <p class="price-subtitle1">Gold</p>
-                                <p class="price-subtitle2">1000$ </p>
-                                <p class="price-subtitle3">One location <br> 120 photos in color <br> 12 photos in retouch <br> Readiness 2-3 weeks <br> Make up, visage</p>
-                            </div>
-                            <div class="price-button">
-                                <div class="pricebutton_style">Order shooting</div>
-                            </div>
+                            
+                            <div class="wrapp_block">                            
+                                <div class="margin_for_button">
+                                    <span class="price-subtitle1">Gold</span>
+                                    <span class="price-subtitle2">100 $ </span>
+                                    <span class="price-subtitle3">One location 
+                                    <span class="price-subtitle3">Three locations or more</span> 
+                                    <span class="price-subtitle3">300 photos in color</span> 
+                                    <span class="price-subtitle3">50 photos in retouch</span> 
+                                    <span class="price-subtitle3">Make up, visage, hairstyle</span>
+                                </div>
+                                    <button class="pricebutton_style">Order shooting</button>                    
+                            </div>                          
                         </div>                        
                     </div>
                 </div>
             </section>
 
+            <div class="container">
             <section class="section" id="contacts">
-                <div class="wrapper-contact-backround">
-                    <form class="search-form">
-                        <div class="search-form_wrapp">
-                            <p class="search-form_info">
-                                <span class="contact_1">Contact me</span>
-                                <input type="text" name="email" class="contact_info"><a class="contact_font">E-mail</a>
-                                <input type="text" name="tel" class="contact_info"><a class="contact_font">Phone</a>
-                                <input type="text" name="message" class="contact_info"><a class="contact_font">Message</a>
+                <div class="wrapper">
+                    <div class="wrapper-contact-backround">
+                        <form class="search-form">
+                            <div class="search-form_wrapp">
+                                <h2 class="contact_1">Contact me</h2>
+                                <input type="email" name="email" class="contact_info" placeholder="E-mail">
+                                <input type="tel" name="tel" class="contact_info" placeholder="Phone">
+                                <textarea type="text" name="message" class="contact_message" placeholder="Message"></textarea>
                                 <button type="button" class="contact-button">Send message</button>
-                            </p>
-                        </div>
-                    </form>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
-    </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="wrapper">
                 <div class="footer_item">
-                    <div class="footer-left">
-                        <a>© 2022 github</a>
+                    <div class="footer-left">                        
+                        <a>©</a>                       
+                        <a>2022</a>                       
+                        <a href="https://github.com/comtvset" class="nav-link">github</a>                      
                     </div>
+
                     <div class="nav-link_footer">
-                        <p>Rolling Scopes School</p>
+                        <a href="https://rs.school/js/" class="nav-link">Rolling Scopes School</a>
                     </div>
-                    <div class="right">
-                        <div>
-                            <img class="footer_button" src="assets/svg/inst_1.svg" alt="img">
-                        </div>
-                        <div>
-                            <img class="footer_button" src="assets/svg/fb_1.svg" alt="img">
-                        </div>
-                        <div>
-                            <img class="footer_button" src="assets/svg/tw_1.svg" alt="img">
-                        </div>
-                        <div>
-                            <img class="footer_button" src="assets/svg/pinterest_1.svg" alt="img">
-                        </div>
+                    <div class="right">                        
+                        <svg class="footer_button">
+                            <use xlink:href="./assets/svg/sprite.svg#inst_1"></use>
+                        </svg>
+                        <svg class="footer_button">
+                            <use xlink:href="./assets/svg/sprite.svg#fb_1"></use>
+                        </svg>
+                        <svg class="footer_button">
+                            <use xlink:href="./assets/svg/sprite.svg#tw_1"></use>
+                        </svg>
+                        <svg class="footer_button">
+                            <use xlink:href="./assets/svg/sprite.svg#pinterest_1"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
 
+    <script src="./index.js"></script>
     <link rel="stylesheet" href="index.js"> <!-- уточнить правильно ли подключил!!!! -->
 </body>
 </html>
