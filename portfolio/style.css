@@ -692,7 +692,59 @@
 
   }
 
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 15;
+    margin-left: 30px;
+    display: none;
+  }
+  
+  .line {
+    width: 80%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 4px 0;
+    margin-right: 140px;
+    z-index: 15;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger.open .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.open .line2 {
+    opacity: 0;
+  }
+  
+  .hamburger.open .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
   @media (max-width: 768px) {
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 40px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 15;
+      
+      margin-left: 30px;
+      display: block;
+      margin-top: 15px;
+    }
    
     header {
       max-width: 768px; 
@@ -733,12 +785,12 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       max-width: 768px;
       height: 90px;
       margin-bottom: 160px;
-      /*border: solid #0df705 1px;*/
+       /*border: solid #0df705 1px;*/
     }
   
     .icon {
@@ -750,9 +802,6 @@
       /*border: solid #f6fa01 1px;*/
       cursor: pointer;
       transition: all 0.5s ease;
-      
-    
-      
     }
     
     .icon:hover {
@@ -779,9 +828,9 @@
       display: flex;
       flex-wrap: wrap;
       list-style: none;
-      /*border: solid #3af700 1px;*/
-      margin-left: 0px;
-      margin-right: 90px; 
+       /*border: solid #3af700 1px;*/
+      margin-left: 450px;
+      margin-right: 0px; 
   
     }
 
