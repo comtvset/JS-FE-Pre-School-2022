@@ -1190,6 +1190,12 @@
   /*Contact style end*/
   .footer_item{
     flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    height: 140px;
+  }
+  .nav-link_footer {
+  margin-top: -15px;
   }
   
   }
