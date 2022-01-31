@@ -6,26 +6,41 @@ function toggleMenu() {
 hamburger.addEventListener('click', toggleMenu);
 
 
-// const portfolioBtn = document.querySelector('.portfolio-button');
-// const portfolioImage = document.querySelector('.portfolio-image');
-
-// portfolioBtn.addEventListener('click', () => {
-//    portfolioImage.src = "./assets/img/winter/1.jpg"
-// });
-
 const portfolioBtn = document.querySelector('.portfolio-button');
 const portfolioImages = document.querySelectorAll('.portfolio-image');
+const portfolioBtns = document.querySelector('.wrapp_portfolio1');
 
-portfolioBtn.addEventListener('click', () => {
-  portfolioImages.forEach((img, index) => img.src = `./assets/img/winter/${index + 1}.jpg`)
-});
+// portfolioBtn.addEventListener('click', () => {
+//   portfolioImages.forEach((img, index) => img.src = `./assets/img/winter/${index + 1}.jpg`)
+// });
 
-const portfolioBtns = document.querySelector('.wrapper');
+//Button season
 function changeImage(event) {
-  if(event.target.classList.contains('portfolio-button')) {
-    dataset.season = "winter"
-    dataset.season = "spring"
-    dataset.season = "summer"
-    dataset.season = "autumn"
+  if (event.target.classList.contains('portfolio-button')) {
+     if(event.target.dataset.season === 'winter') {
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/winter/${index + 1}.jpg`);
+
+     } else if (event.target.dataset.season === 'spring') {
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/spring/${index + 1}.jpg`);
+
+     } else if (event.target.dataset.season === 'summer') {
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/summer/${index + 1}.jpg`);
+
+     } else if (event.target.dataset.season === 'autumn') {
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/autumn/${index +1}.jpg`);
+     }
+  };
+};
+portfolioBtns.addEventListener('click', changeImage);
+
+//Cash image
+const seasons = document.querySelectorAll(['winter', 'spring', 'summer', 'autumn']);
+function preloadImages(array) {
+array.forEach((seasons) => {
+  for(let i = 1; i <= 6; i++) {
+    const img = new Image();
+    img.src = `./assets/img/${seasons}/${i}.jpg`;
   }
+})
 }
+preloadImages();
