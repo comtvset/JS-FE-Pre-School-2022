@@ -208,7 +208,8 @@
 
   .intro-button:hover, .intro-button:active {
     transition: all 0.5s ease;
-    color: white;
+    color: #BDAE82;
+    background-color: #000000;
   }
 
   /*Intro style end*/
@@ -342,6 +343,8 @@
   .portfolio-button:hover, .portfolio-button:active {
     color: white;
     transition: all 0.5s ease;
+    color: #000;
+    background-color: #bdae82;
   }
 
   .portfolio-button2:hover, .portfolio-button2:active {
@@ -489,8 +492,9 @@
 
 
   .pricebutton_style:hover, .pricebutton_style:active {
-    color: white;
     transition: all 0.5s ease;
+    color: #BDAE82;
+    background-color: #000000;
   }
 
   /*Price style end*/
@@ -614,6 +618,8 @@
     border: 0;
     cursor: pointer;
     color: #000000;
+    border: 1px solid #BDAE82;
+    background-color: #BDAE82;
     
     
     
@@ -627,8 +633,9 @@
   }
 
   .contact-button:hover, .contact-button:focus, .contact-button:active {
-    color: white;
     transition: all 0.5s ease;
+    color: #BDAE82;
+    background-color: #000000;
 
   }
 
