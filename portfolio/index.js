@@ -38,7 +38,12 @@ const i18Obj = {
     'price-description-3-span-5': 'Make up, visage, hairstyle',
     'order': 'Order shooting',
     'contact-me': 'Contact me',
-    'send-message': 'Send message'
+    'send-message': 'Send message',
+    'standard': 'Standard',
+    'premium': 'Premium',
+    'gold': 'Gold'
+
+
   },
   'ru': {
     'skills': 'Навыки',
@@ -79,28 +84,38 @@ const i18Obj = {
     'price-description-3-span-5': 'Макияж, визаж, прическа',
     'order': 'Заказать съемку',
     'contact-me': 'Свяжитесь со мной',
-    'send-message': 'Отправить'
+    'send-message': 'Отправить',
+    'standard': 'Стандарт',
+    'premium': 'Премиум',
+    'gold': 'Голд'
   }
 }
 
 
-const hamburger = document.querySelector('.hamburger')
+// const hamburger = document.querySelector('.hamburger')
 
-function toggleMenu() {
-  hamburger.classList.toggle('open')
-}
-hamburger.addEventListener('click', toggleMenu)
+// function toggleMenu() {
+//   hamburger.classList.toggle('open')
+// }
+// hamburger.addEventListener('click', toggleMenu)
 
 
-const portfolioBtn = document.querySelector('.portfolio-button', '.intro-button', '.contact-button', 'pricebutton_style')
+const portfolioBtn = document.querySelectorAll('.portfolio-button')
 const portfolioImages = document.querySelectorAll('.portfolio-image')
-const portfolioBtns = document.querySelector('.wrapp_portfolio1')
+const portfolioBtns = document.querySelector('.button-section')
 
-// portfolioBtn.addEventListener('click', () => {
-//   portfolioImages.forEach((img, index) => img.src = `./assets/img/winter/${index + 1}.jpg`)
-// });
 
-//Button season
+//ACTIVE BUTTON
+portfolioBtns.addEventListener('click', (event) => {
+  portfolioBtn.forEach(Element => {
+    Element.classList.remove('active');
+    event.target.classList.add('active');
+  })
+})
+
+
+
+//BUTTON SEASON
 function changeImage(event) {
   if (event.target.classList.contains('portfolio-button')) {
      if(event.target.dataset.season === 'winter') {
@@ -119,7 +134,8 @@ function changeImage(event) {
 }
 portfolioBtns.addEventListener('click', changeImage);
 
-//Cash image
+
+//CASH IMAGE
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
 function preloadImages(array) {
   array.forEach((seasons) => {
@@ -131,24 +147,22 @@ function preloadImages(array) {
 }
 preloadImages(seasons)
 
-//Active button
 
-portfolioBtn.classList.add('active');
+//TRANSLATE
 
-//Translate
 //import i18Obj from './translate.js' //<---- не работает!!!
 
 
-const buttonLang = document.querySelectorAll('.nav-link2')
+const buttonLang = document.querySelectorAll('.lang')
 const buttonEn = document.querySelector('.en')
 const buttonRu = document.querySelector('.ru')
 const language = document.querySelectorAll('[data-i18]')
 
 function getTranslate(event) {      
   let lang = event.target.textContent
-  let current = document.getElementsByClassName('nav-link2')
-  current[0].classList.remove('nav-link2')
-  this.classList.add('nav-link2')
+  let current = document.getElementsByClassName('lang')
+  current[0].classList.remove('lang')
+  this.classList.add('lang')
   
   if (lang === 'ru') {   //<---- РАЗОБРАТЬ ЭТОТ КОД!!!
      language.forEach((data) => {
@@ -166,3 +180,15 @@ function getTranslate(event) {
 buttonLang.forEach((lan) => {
   lan.addEventListener('click', getTranslate)
 })
+
+
+//THEME
+// const themeWhite = document.querySelector('.container')
+
+// function lightTheme(array) {
+//   array.forEach((theme) => {
+//      d
+//   }
+// })
+
+// lightTheme(seasons)
