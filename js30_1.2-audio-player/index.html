@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">    
+    <title>audio-player</title>
+</head>
+<body>
+   
+    <div class="wrapper">
+        <div class="player">
+            <div class="active_status">Playing</div>
+            <div class="cover"><img class="cover_img" src="./assets/svg/cover1.svg" alt="cover"></div>
+            <div class="title_song">The Architect - Cretin De Terrien</div>
+            <audio class="audio" src="./assets/audio/The_Architect_-_Cretin_De_Terrien.mp3"></audio>
+            <div class="progress_container">
+                <div class="progress"></div>
+            </div>
+            <div class="buttons">
+                <div class="back"> <img class="img_src" src="./assets/svg/back.svg" alt="back"></div>
+                <div class="play"> <img class="img_src" src="./assets/svg/play.svg" alt="play"></div>
+                <div class="forward"> <img class="img_src" src="./assets/svg/forward.svg" alt="forward"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
