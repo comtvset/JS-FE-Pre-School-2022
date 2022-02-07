@@ -32,6 +32,16 @@
     font-weight: normal;
     transition: all 0.5s ease;
   }
+  button {                     /*<-- обнуление button */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 0;   
+  }
 .wrapper {
   height: 100vh; /* <--- экран без прокрутки */
   width: 100%;
@@ -44,9 +54,21 @@
   width: 50px;
   height: 50px;
 }
+
+.img_src2 {
+  width: 50px;
+  height: 50px;
+}
 .cover_img {
   width: 350px;
   height: 350px;
+}
+.cover_img.active {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 4s linear infinite;
+  -moz-animation: rotation 4s linear infinite;
+  -webkit-animation: rotation 4s linear infinite;
+  -o-animation: rotation 4s linear infinite;
 }
 
 .player {
@@ -54,7 +76,8 @@
   border-radius: 30px;
   max-width: 400px;
   width: 100%;
-  padding: 25px
+  padding: 25px;
+
 }
 .active_status {
   font-size: normal;
@@ -69,6 +92,7 @@
   margin: 25px 0;
 }
 .title_song {
+  height: 60px;
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
@@ -89,10 +113,20 @@
   background: rgb(44, 44, 44);
   border-radius: 5px; 
   height: 8px;
-  width: 150px;
+  /* width: 150px; */
   margin-left: 1px;
 }
-.buttons {
+
+.time {
+  margin-top: 5px;
+  margin-left: 4px;
+  width: 0;
+  height: 3px;
+  font-size: 14px;
+  background-color: #383838
+}
+
+.controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,3 +138,8 @@
 .buttons:active, .buttons:hover {
   cursor: pointer;
 } 
+
+@-webkit-keyframes rotation{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
