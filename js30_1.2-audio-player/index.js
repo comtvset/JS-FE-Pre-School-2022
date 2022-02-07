@@ -10,6 +10,8 @@ const player = document.querySelector('.player'),
       imgSrc = document.querySelector('.img_src'),
       time = document.querySelector('.time')
       background = document.querySelector('.background2')
+      
+      document.querySelector('#volume').oninput = volume
 
 const songs = ['Love Beans - Who Is She', 
               'Sudan Archives - Come Meh Way', 
@@ -23,6 +25,11 @@ const songs = ['Love Beans - Who Is She',
               'Rivière Monk - Voyage']
 
 let songIndex = 0
+
+function volume() {
+  let v = this.value;
+  audio.volume = v / 100;
+}
 
 function initSong(song) {
  titel.innerHTML = song
