@@ -8,7 +8,7 @@ const player = document.querySelector('.player'),
       titel = document.querySelector('.title_song'),
       cover = document.querySelector('.cover_img'),
       imgSrc = document.querySelector('.img_src'),
-      time = document.querySelector('time')
+      time = document.querySelector('.time')
 
 const songs = ['The Architect - Cretin De Terrien', 'Sudan Archives - Come Meh Way', 'Love Beans - Who Is She']
 
@@ -83,7 +83,25 @@ progressContainer.addEventListener('click', setProgress)
 audio.addEventListener('ended', nextSong)
 
 function setTime() {
-  audio.onloadeddata = audio.duration
-  
+  progress.value = (audio.currentTime / audio.duration) * 100
+  // console.log(progress.value)
+  let minutes = Math.floor(audio.currentTime / 60) 
+  if (minutes < 10) {
+    minutes = '0' + String(minutes)
+  }
+
+  let seconds = Math.floor(audio.currentTime % 60)
+  if (seconds < 10) {
+    seconds = '0' + String(seconds)
+  }
+
+  time.innerHTML = `${minutes}:${seconds}`
 }
 audio.addEventListener('timeupdate', setTime)
+
+
+
+/* СДЕЛАТЬ:
+-ВИЗУАЛИЗАЦИЮ
+-ФОН
+-ГРОМКОСТЬ */
