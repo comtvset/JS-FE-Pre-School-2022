@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Thin.ttf");
+  font-weight: 100;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    transition: all 0.5s ease;
+  }
+  button {                     /*<-- обнуление button */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 0;   
+  }
+.wrapper {
+  height: 100vh; /* <--- экран без прокрутки */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_src {
+  width: 50px;
+  height: 50px;
+}
+
+.img_src2 {
+  width: 50px;
+  height: 50px;
+}
+.cover_img {
+  width: 350px;
+  height: 350px;
+}
+.cover_img.active {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 4s linear infinite;
+  -moz-animation: rotation 4s linear infinite;
+  -webkit-animation: rotation 4s linear infinite;
+  -o-animation: rotation 4s linear infinite;
+}
+
+.player {
+  background: rgb(205, 209, 209);
+  border-radius: 30px;
+  max-width: 400px;
+  width: 100%;
+  padding: 25px;
+
+}
+.active_status {
+  font-size: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(39, 39, 39);
+  text-align: center;
+}
+.cover {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+.title_song {
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  color: rgb(39, 39, 39);
+  text-align: center;
+}
+.progress_container {
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.progress {
+  background: rgb(44, 44, 44);
+  border-radius: 5px; 
+  height: 8px;
+  /* width: 150px; */
+  margin-left: 1px;
+}
+
+.time {
+  margin-top: 5px;
+  margin-left: 4px;
+  width: 0;
+  height: 3px;
+  font-size: 14px;
+  background-color: #383838
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 185px;
+  width: 100%;
+  margin: auto;
+  margin-top: 45px;
+}
+.buttons:active, .buttons:hover {
+  cursor: pointer;
+} 
+
+@-webkit-keyframes rotation{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
