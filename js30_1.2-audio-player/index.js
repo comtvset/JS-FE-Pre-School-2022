@@ -9,21 +9,34 @@ const player = document.querySelector('.player'),
       cover = document.querySelector('.cover_img'),
       imgSrc = document.querySelector('.img_src'),
       time = document.querySelector('.time')
+      background = document.querySelector('.background2')
 
-const songs = ['The Architect - Cretin De Terrien', 'Sudan Archives - Come Meh Way', 'Love Beans - Who Is She']
+const songs = ['Love Beans - Who Is She', 
+              'Sudan Archives - Come Meh Way', 
+              'The Architect - Crétin De Terrien', 
+              'The Weeknd - Blinding Lights', 
+              'Ed Nash (feat. Liz Lawrence) - Mad World', 
+              'Virgil Arles - Roller Skates', 
+              'Plastic Bertrand - Ca Plane Pour Moi', 
+              'Buntspecht - Unter den Masken', 
+              'David Rawlings - Cumberland Gap', 
+              'Rivière Monk - Voyage']
 
 let songIndex = 0
 
 function initSong(song) {
  titel.innerHTML = song
  audio.src = `./assets/audio/${song}.mp3`
- cover.src = `./assets/svg/cover4.svg`
+ cover.src = `./assets/image/cover${songIndex + 1}.png`
+ background.src = `./assets/image/background${songIndex + 1}.jpg`
+ console.log(background.src)
 }
 initSong(songs[songIndex])
 
 function playSong() {
   player.classList.add('play')
   cover.classList.add('active')
+  background.classList.add('active')
   imgSrc.src = './assets/svg/pause.svg'
   audio.play()
 }
@@ -31,6 +44,7 @@ function playSong() {
 function pauseSong() {
   player.classList.remove('play')
   cover.classList.remove('active')
+  background.classList.remove('active')
   imgSrc.src = './assets/svg/play.svg'
   audio.pause()
 }
