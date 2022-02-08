@@ -122,7 +122,6 @@ audio.addEventListener('timeupdate', setTime)
 
 function fullTimeFunction() {
   let minutes = Math.floor(audio.duration / 60)
-  console.log(minutes)
   if (minutes < 10) {
     minutes = '0' + String(minutes)
   }
