@@ -8,9 +8,10 @@ const player = document.querySelector('.player'),
       titel = document.querySelector('.title_song'),
       cover = document.querySelector('.cover_img'),
       imgSrc = document.querySelector('.img_src'),
-      time = document.querySelector('.time')
+      timeProgress = document.querySelector('.time_progress'),
+      fullTime = document.querySelector('.full_time'),
       background = document.querySelector('.background2')
-      
+
       document.querySelector('#volume').oninput = volume
 
 const songs = ['Love Beans - Who Is She', 
@@ -36,7 +37,7 @@ function initSong(song) {
  audio.src = `./assets/audio/${song}.mp3`
  cover.src = `./assets/image/cover${songIndex + 1}.png`
  background.src = `./assets/image/background${songIndex + 1}.jpg`
- console.log(background.src)
+//  console.log(background.src)
 }
 initSong(songs[songIndex])
 
@@ -105,7 +106,6 @@ audio.addEventListener('ended', nextSong)
 
 function setTime() {
   progress.value = (audio.currentTime / audio.duration) * 100
-  // console.log(progress.value)
   let minutes = Math.floor(audio.currentTime / 60) 
   if (minutes < 10) {
     minutes = '0' + String(minutes)
@@ -116,13 +116,25 @@ function setTime() {
     seconds = '0' + String(seconds)
   }
 
-  time.innerHTML = `${minutes}:${seconds}`
+  timeProgress.innerHTML = `${minutes}:${seconds}`
 }
 audio.addEventListener('timeupdate', setTime)
 
+function fullTimeFunction() {
+  let minutes = Math.floor(audio.duration / 60)
+  console.log(minutes)
+  if (minutes < 10) {
+    minutes = '0' + String(minutes)
+  }
+  let seconds = Math.floor(audio.duration % 60)
+  if (seconds < 10) {
+    seconds = '0' + String(seconds)
+  }
+  fullTime.innerHTML = `${minutes}:${seconds}`
 
+}
+audio.addEventListener('durationchange', fullTimeFunction)
 
 /* СДЕЛАТЬ:
 -ВИЗУАЛИЗАЦИЮ
--ФОН
--ГРОМКОСТЬ */
+ */
