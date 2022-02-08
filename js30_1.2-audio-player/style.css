@@ -183,6 +183,18 @@
   margin-left: 1px;
 }
 
+.volume {
+  border-radius: 5px; 
+  height: 8px;
+  width: 150px;
+  margin-left: 1px;
+}
+
+.volume:hover {
+  box-shadow: 1px 1px 5px rgb(29, 29, 29);
+ 
+}
+
 .time {
   display: flex;
   flex-direction: row;
@@ -192,7 +204,7 @@
   font-size: 14px;
   color: #383838;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .time_progress {
@@ -220,7 +232,7 @@
   max-width: 185px;
   width: 100%;
   margin: auto;
-  margin-top: 45px;
+  margin-top: 15px;
 }
 .buttons:active, .buttons:hover {
   cursor: pointer;
@@ -231,3 +243,56 @@
   to {-webkit-transform: rotate(360deg);}
 }
 
+@media (max-width: 768px) {
+   .background2 {
+    position: relative;
+    width: 100vw;
+  }
+  .player {
+    width: 400px;    
+  }
+}
+
+@media (max-width: 425px) {
+   .background2 {
+    
+    width: 100vw;
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  .player {
+    padding: 25px;
+    width: 400px;    
+  }
+
+  @media (max-width: 375px) {
+    .background2 {     
+     width: 100vw;
+     overflow: hidden;
+   }
+   .player {
+     padding: 10px;
+     width: 370px;    
+   }
+  }
+
+  @media (max-width: 320px) {
+    .background2 {     
+     width: 100vw;
+     /* height: 100vw; */
+     overflow: hidden;
+   }
+   .player {
+     padding: 10px;
+     width: 300px;    
+   }
+   .cover_img {
+     width: 85%;
+     height: 85%;
+   }
+  }
+
+}
