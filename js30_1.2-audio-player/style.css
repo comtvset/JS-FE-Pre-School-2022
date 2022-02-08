@@ -32,6 +32,9 @@
     font-weight: normal;
     transition: all 0.5s ease;
   }
+  a {
+    text-decoration: none;
+  }
   button {                     /*<-- обнуление button */
     padding: 0;
     border: none;
@@ -243,7 +246,42 @@
   to {-webkit-transform: rotate(360deg);}
 }
 
+/*FOOTER START*/
+
+.footer-item{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+}
+
+.footer-left{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  margin-left: 14px;
+  font-size: 15px;
+}
+
+.footer-center {
+  font-size: 15px;
+  line-height: 50px;
+  margin-right: -4px;
+}
+
+/*FOOTER END*/
+
+
 @media (max-width: 768px) {
+  .contaner {
+    overflow: hidden;
+  }
    .background2 {
     position: relative;
     width: 100vw;
@@ -254,8 +292,10 @@
 }
 
 @media (max-width: 425px) {
-   .background2 {
-    
+  .contaner {
+    overflow: hidden;
+  }
+   .background2 {    
     width: 100vw;
     overflow: hidden;
     left: 50%;
@@ -269,29 +309,38 @@
   }
 
   @media (max-width: 375px) {
+    .contaner {
+      overflow: hidden;
+    }
     .background2 {     
      width: 100vw;
      overflow: hidden;
    }
    .player {
      padding: 10px;
-     width: 370px;    
+     width: 360px;    
    }
+   .cover_img {
+    width: 95%;
+    height: 95%;
+  }
   }
 
   @media (max-width: 320px) {
+    .contaner {
+      overflow: hidden;
+    }
     .background2 {     
      width: 100vw;
      /* height: 100vw; */
-     overflow: hidden;
-   }
+    }
    .player {
      padding: 10px;
      width: 300px;    
    }
    .cover_img {
-     width: 85%;
-     height: 85%;
+     width: 90%;
+     height: 90%;
    }
   }
 
