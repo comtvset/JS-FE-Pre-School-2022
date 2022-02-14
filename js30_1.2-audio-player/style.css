@@ -1,0 +1,347 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("assets/fonts/Roboto/Roboto-Thin.ttf");
+  font-weight: 100;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    transition: all 0.5s ease;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {                     /*<-- обнуление button */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 0;   
+  }
+
+.contaner {  
+  max-width: 1440px;
+  margin: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  background-position: center;
+  
+  
+}
+
+.background2 {
+  margin: auto;
+  /* background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  height: 100vh;
+  max-width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+/* .background2.active {
+ 
+}
+
+.shadow {
+  
+} */
+.shadow:hover {
+  -webkit-filter: drop-shadow(0px 2px 2px rgb(29, 29, 29));
+  filter: drop-shadow(0px 2px 2px rgb(29, 29, 29));
+}
+
+
+.img_src {
+  width: 50px;
+  height: 50px;
+}
+
+.img_src2 {
+  width: 50px;
+  height: 50px;
+}
+.cover_img {
+  width: 350px;
+  height: 350px;
+}
+.cover_img.active {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 4s linear infinite;
+  -moz-animation: rotation 4s linear infinite;
+  -webkit-animation: rotation 4s linear infinite;
+  -o-animation: rotation 4s linear infinite;
+}
+
+.player {
+  background: rgb(205, 209, 209);
+  border-radius: 30px;
+  max-width: 400px;
+  width: 100%;
+  padding: 25px;
+  /* box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1); */
+  box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset; */
+
+
+  /* background-color: rgb(240, 16, 16);  */
+  background-color: rgba(228, 228, 228, 0.4); 
+  color: white;
+  font-weight: bold;
+  /* border: 3px solid #f1f1f1; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+
+}
+.active_status {
+  font-size: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(39, 39, 39);
+  text-align: center;
+}
+.cover {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+.title_song {
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  color: rgb(39, 39, 39);
+  text-align: center;
+}
+.progress_container {
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.progress_container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
+}
+
+.progress {
+  background: rgb(44, 44, 44);
+  box-shadow: 1px 1px 5px rgb(29, 29, 29);
+  border-radius: 5px; 
+  height: 8px;
+  /* width: 150px; */
+  margin-left: 1px;
+}
+
+.volume {
+  border-radius: 5px; 
+  height: 8px;
+  width: 150px;
+  margin-left: 1px;
+}
+
+.volume:hover {
+  box-shadow: 1px 1px 5px rgb(29, 29, 29);
+ 
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #383838;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.time_progress {
+  margin-left: 4px;
+  width: 0;
+  height: 3px;
+  font-size: 14px;
+  color: #383838;
+  font-weight: bold;
+}
+
+.full_time {
+  margin-right: 40px;
+  width: 0;
+  height: 3px;
+  font-size: 14px;
+  color: #383838;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 185px;
+  width: 100%;
+  margin: auto;
+  margin-top: 15px;
+}
+.buttons:active, .buttons:hover {
+  cursor: pointer;
+} 
+
+@-webkit-keyframes rotation{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+
+/*FOOTER START*/
+
+.footer-item{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+}
+
+.footer-left{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  margin-left: 14px;
+  font-size: 15px;
+}
+
+.footer-center {
+  font-size: 15px;
+  line-height: 50px;
+  margin-right: -4px;
+}
+
+/*FOOTER END*/
+
+
+@media (max-width: 768px) {
+  .contaner {
+    overflow: hidden;
+  }
+   .background2 {
+    position: relative;
+    width: 100vw;
+  }
+  .player {
+    width: 400px;    
+  }
+}
+
+@media (max-width: 425px) {
+  .contaner {
+    overflow: hidden;
+  }
+   .background2 {    
+    width: 100vw;
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  .player {
+    padding: 25px;
+    width: 400px;    
+  }
+
+  @media (max-width: 375px) {
+    .contaner {
+      overflow: hidden;
+    }
+    .background2 {     
+     width: 100vw;
+     overflow: hidden;
+   }
+   .player {
+     padding: 10px;
+     width: 360px;    
+   }
+   .cover_img {
+    width: 95%;
+    height: 95%;
+  }
+  }
+
+  @media (max-width: 320px) {
+    .contaner {
+      overflow: hidden;
+    }
+    .background2 {     
+     width: 100vw;
+     /* height: 100vw; */
+    }
+   .player {
+     padding: 10px;
+     width: 300px;    
+   }
+   .cover_img {
+     width: 90%;
+     height: 90%;
+   }
+  }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/svg/cover1.svg">
+    <title>audio-player</title>
+</head>
+
+<body>
+<div class="contaner">
+    <div class="wrapper">
+        <img class="background2" src="./assets/image/background1.jpg" alt="background"></div>           
+        <div class="player">
+            
+            <div class="cover"><img class="cover_img" src="./assets/svg/cover1.svg" alt="cover"></div>            
+            <div class="title_song">The Architect - Cretin De Terrien</div>
+            <audio class="audio" src="./assets/audio/Love Beans - Who Is She.mp3"></audio>
+            <div class="progress_container">
+                <div class="progress"></div>
+            </div>
+            <div class="time">
+                <div class="time_progress">00:00</div>
+                <div class="full_time">05:05</div>
+            </div>
+            <div><input class="volume" value="#ff0000" type="range" id="volume" min=0 max=100></div>               
+            <div class="controls">
+                <button class="back"> <img class="img_src2 shadow" src="./assets/svg/back.svg" alt="back"></button>
+                <button class="play"> <img class="img_src shadow" src="./assets/svg/play.svg" alt="play"></button>
+                <button class="forward"> <img class="img_src2 shadow" src="./assets/svg/forward.svg" alt="forward"></button>
+            </div>           
+    </div>    
+</div>    
+
+<footer class="footer">
+    <div class="container">            
+        <div class="footer-item">
+            <div class="footer-left">                        
+                <a>©</a>                       
+                <a>2022</a>                       
+                <a href="https://github.com/comtvset" class="nav-link">github</a>                      
+            </div>
+
+            <div class="footer-center">
+                <a href="https://rs.school/js/" class="nav-link">Rolling Scopes School</a>
+            </div>            
+        </div>           
+    </div>
+</footer> 
+</body>
+
+<script src="./index.js"></script>
+</html>
