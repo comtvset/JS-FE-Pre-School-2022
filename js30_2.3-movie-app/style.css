@@ -1,1 +1,150 @@
-init
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Thin.ttf");
+    font-weight: 100;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color:  rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.search {
+    background-color: transparent;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    width: 400px;
+    height: 40px;
+    font-weight: 300;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: rgb(117, 117, 117);
+    -webkit-box-shadow: 0px 0px 15px 9px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0px 0px 15px 9px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 9px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;       
+}
+
+.search::placeholder {
+    color: rgba(214, 214, 172, 0.795);
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: rgb(31, 31, 31);
+    color: white;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    
+}
+
+.movies {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px black;
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.movies img {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+      
+}
+
+.info {
+    color: rgb(219, 235, 4);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0,5rem 1rem 1rem;
+    letter-spacing: 0,5px; 
+}
+
+.info span {
+    background-color: gray;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.info span.green {
+    color: greenyellow;
+}
+
+.info span.orange {
+    color: orange;
+}
+
+.info span.red {
+    color: red;
+}
+
+.description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    color: black;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s, ease-in;
+}
+
+.movies:hover .description {
+    transform: translateY(0);
+}
