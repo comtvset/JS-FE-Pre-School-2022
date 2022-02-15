@@ -50,6 +50,8 @@ function getColor(vote) {
 
 form.addEventListener('click', (event) => {
     event.preventDefault()
+    console.log(event)
+    
 
     const searchThem = search.value
     if(searchThem) {
