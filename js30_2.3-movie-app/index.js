@@ -48,11 +48,9 @@ function getColor(vote) {
     }
 }
 
-form.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault()
-    console.log(event)
     
-
     const searchThem = search.value
     if(searchThem) {
         getMovies(SEARCH_URL+'&query='+searchThem)
