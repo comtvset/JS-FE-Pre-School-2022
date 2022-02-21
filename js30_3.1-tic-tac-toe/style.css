@@ -22,6 +22,11 @@ h1 {
     margin-bottom: 60px;
 }
 
+h2 {
+    font-family: 'Shizuru';
+    width: 80px;
+}
+
 a {
     text-decoration: none;
     font-family: 'Indie_Flower';
@@ -39,7 +44,7 @@ body {
 }
 .container_field {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 1000px;
     height: 500px;
