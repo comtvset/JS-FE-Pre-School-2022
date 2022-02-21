@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Shizuru';
+    src: url("assets/fonts/Shizuru/Shizuru-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Indie_Flower';
+    src: url("assets/fonts/Indie_Flower/IndieFlower-Regular.ttf");
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'Shizuru';
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Indie_Flower';
+    font-size: 20px;
+}
+a:visited {
+   color: yellow;
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    width: 1440px;
+    margin: auto;
+}
+.container_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(24, 27, 27);
+    margin: auto;
+}
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(67, 122, 122);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 35px;
+    border: 1px solid rgb(24, 27, 27);  
+    font-family: 'Shizuru';  
+    font-size: 80px;
+    padding-bottom: 22px;
+    cursor: pointer;
+}
+
+.box:hover {
+    -webkit-box-shadow: inset 0px 0px 40px -20px rgb(24, 27, 27);
+    -moz-box-shadow: inset 0px 0px 40px -20px rgb(24, 27, 27);
+    box-shadow: inset 0px 0px 40px -20px rgb(24, 27, 27);
+}
+
+
+.footer-item {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;    
+}
