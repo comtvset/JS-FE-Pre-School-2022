@@ -27,6 +27,10 @@ h2 {
     width: 80px;
 }
 
+.time_game {
+    font-family: 'Shizuru';
+}
+
 a {
     text-decoration: none;
     font-family: 'Indie_Flower';
