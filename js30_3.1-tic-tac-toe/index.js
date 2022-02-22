@@ -1,3 +1,4 @@
+// "use strict"
 const field = document.querySelector('.field');
 const h2 = document.getElementsByTagName('h2')[0];
 const box = document.getElementById('.box');
@@ -22,15 +23,20 @@ field.addEventListener('click', function(event) {
             
     move++; //переходим к следующему шагу
     
-    if (check() == 0 && move == 9) return location.reload(alert('DEADLOCK')); 
-    
+    // if ((check() == 0)) return location.reload(alert('DEADLOCK'));
+    if (check() == 0  && move == 9) {
+        alert('DEADLOCK')
+        return location.reload();
+        }
 
    
       
     
-    // timeGame = console.log(h2)
+    timeGame = console.log(h2)
 
 });
+
+
 
 
 
@@ -53,11 +59,11 @@ function check() {
     for(let i = 0; i < win.length; i++) {
         if(boxes[win[i][0]].innerHTML === 'X' && boxes[win[i][1]].innerHTML === 'X' && boxes[win[i][2]].innerHTML === 'X') {
             location.reload(alert('X - WIN!'));
-           
+            return 1
             
         } else if(boxes[win[i][0]].innerHTML === 'O' && boxes[win[i][1]].innerHTML === 'O' && boxes[win[i][2]].innerHTML === 'O'){
             location.reload(alert('O - WIN!'));  
-           
+            return 1
         } 
         
     }
